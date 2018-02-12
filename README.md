@@ -3,13 +3,13 @@ Determine which teams in a sports league division have been eliminated from the 
 
 To interactively provide test inputs, run the program with
 
-	`java BaseballElimination`
+	java BaseballElimination
 
    To conveniently test the algorithm with a large input, create a text file
    containing one or more test divisions (in the format described below) and run
    the program with
 
-	`java BaseballElimination file.txt`
+	java BaseballElimination file.txt
 
    where file.txt is replaced by the name of the text file.
 
