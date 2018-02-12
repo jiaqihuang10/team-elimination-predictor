@@ -1,15 +1,12 @@
-/* BaseballElimination.java
-   CSC 226 - Summer 2017
-   Assignment 4 - Baseball Elimination Program
-
+/* TeamElimination.java
 
    To interactively provide test inputs, run the program with
-	java BaseballElimination
+	java TeamElimination
 
    To conveniently test the algorithm with a large input, create a text file
    containing one or more test divisions (in the format described below) and run
    the program with
-	java BaseballElimination file.txt
+	java TeamElimination file.txt
    where file.txt is replaced by the name of the text file.
 
    The input consists of an integer representing the number of teams in the division and then
@@ -37,8 +34,8 @@ import edu.princeton.cs.algs4.*;
 import java.util.*;
 import java.io.File;
 
-//Do not change the name of the BaseballElimination class
-public class BaseballElimination{
+//Do not change the name of the TeamElimination class
+public class TeamElimination{
 	// We use an ArrayList to keep track of te eliminated teams.
 	public ArrayList<String> eliminated = new ArrayList<String>();
 	private int team_num;
@@ -54,7 +51,7 @@ public class BaseballElimination{
 	boolean fast_eliminated = false;
 
 
-	/* BaseballElimination(s)
+	/* TeamElimination(s)
 		Given an input stream connected to a collection of baseball division
 		standings we determine for each division which teams have been eliminated
 		from the playoffs. For each team in each division we create a flow network
@@ -62,7 +59,7 @@ public class BaseballElimination{
 		of inter-divisional games between all other teams in the division, the current
 		team is eliminated.
 	*/
-	public BaseballElimination(Scanner s){
+	public TeamElimination (Scanner s){
 		readData(s);
 
 		for(int i = 0; i < team_num; i++) {
@@ -195,12 +192,7 @@ public class BaseballElimination{
 		}
 	}
 
-	/* main()
-	   Contains code to test the BaseballElimantion function. You may modify the
-	   testing code if needed, but nothing in this function will be considered
-	   during marking, and the testing process used for marking will not
-	   execute any of the code below.
-	*/
+
 	public static void main(String[] args){
 		Scanner s;
 		if (args.length > 0){
@@ -227,7 +219,7 @@ public class BaseballElimination{
 				break;
 			//System.out.printf("Reading Division %d data\n", graphNum);
 			long startTime = System.currentTimeMillis();
-			BaseballElimination be = new BaseballElimination(s);
+			TeamElimination be = new TeamElimination(s);
 			//be.print_team_data();
 			System.out.println();
 			if (be.eliminated.size() == 0)
